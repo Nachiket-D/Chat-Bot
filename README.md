@@ -23,7 +23,7 @@ First, clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/Nachiket-D/Chat-Bot.git
-cd Chat-Bot
+cd Chat-Bot/chatbot_project
 ```
 
 ### Build and Run with Docker
