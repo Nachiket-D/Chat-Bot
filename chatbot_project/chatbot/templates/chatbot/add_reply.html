@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Reply</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chatbot/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Reply</h1>
+        <form method="post" action="{% url 'add_reply' %}">
+            {% csrf_token %}
+            <label for="message">User Message:</label>
+            <input type="text" id="message" name="message" value="{{ message }}" readonly>
+            
+            <label for="reply">Bot Reply:</label>
+            <textarea id="reply" name="reply" required></textarea>
+            
+            <button type="submit">Save Reply</button>
+        </form>
+    </div>
+</body>
+</html>
